@@ -1,0 +1,10 @@
+@baseUrl = http://localhost:8000/api
+
+### 1. Login del Supervisor
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "supervisor@gmail.com",
+  "password": "password123"
+}
