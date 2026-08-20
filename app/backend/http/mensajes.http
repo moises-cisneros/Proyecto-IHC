@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:8000/api
+@token = TOKEN
+
+### Enviar un mensaje a un vendedor
+POST {{baseUrl}}/mensajes/enviar/01a02092-a44b-7427-bf79-1fe7f0d5a28a
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+{
+  "mensaje": "Mensaje de prueba",
+  "tipo": "RECORDATORIO"
+}
