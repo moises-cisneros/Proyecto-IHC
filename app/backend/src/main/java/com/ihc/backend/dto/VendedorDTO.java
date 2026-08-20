@@ -2,7 +2,8 @@ package com.ihc.backend.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import java.time.LocalDateTime;
+
+import java.sql.Date;
 import java.util.UUID;
 
 @Getter
@@ -14,5 +15,5 @@ public class VendedorDTO {
     private String ubicacion;
     private Double latitud;
     private Double longitud;
-    private LocalDateTime ultimaConexion;
+    private Date ultimaConexion;
 }
