@@ -1,23 +1,26 @@
 # Persona v0.1
 
-**Nombre:** Carlos
+- **Nombre:** Carlos
+- **Situación:** Supervisor y responsable de un equipo de ventas. Actualmente usa WhatsApp para preguntar el avance de cada uno de sus agentes durante la jornada.
+- **Objetivo:** Revisar el avance de su equipo de ventas (entre 10 y 20 personas) para tomar decisiones sobre la situación en la que está cada uno.
+- **Dificultad:** Revisar los chats uno por uno para saber cómo va el avance es bastante moroso y no le permite tener un buen control.
+- **Necesidad:** Encontrar una manera rápida y eficiente de revisar el avance de su equipo de ventas para no demorar tanto tiempo y poder tomar decisiones rápidas.
 
-**Situacion:** Responsable de un equipo de ventas, usa la ubicacion de whatsapp para ubicar a cada uno
+## App-map v0.1
 
-**Objetivo:** Revisar el avance de su equipo de ventas.
+"¿Dónde puede encontrar la persona lo que necesita?"
 
-**Dificultad:** El equipo de ventas es grande y revisar el avance de cada uno por whatsapp consume mucho tiempo
+Login -> Inicio (Resumen) -> Listado de Vendedores -> Detalles del Vendedor (Modal) -> Enviar Recordatorio (Acción)
 
-**Necesidad:** Encontrar una manera rapida y eficiente de revisar el avance del equipo de ventas
+### Estructura de "AppMap" (Supervisor)
 
-# App Map v0.1
+- **Login Page:** Autenticación de usuarios (Supervisor, Agente Vendedor).
+- **Inicio (Home Screen):** Pantalla principal con un pequeño resumen del día y panel lateral (sidebar).
+- **Vendedores Page (Listado):** Lista de los agentes vendedores. Por ahora se mostrará el estado o ubicación aproximada simulada (ej. "en movimiento", "zona la Villa", "zona norte").
+- **Vendedor Modal:** Vista de detalles al seleccionar un agente. Muestra información básica, estado de su tarea actual y opciones de acción para enviarle un recordatorio o mensaje predefinido (ej. "¿por qué no has empezado a vender?", "felicidades, lo estás haciendo bien").
 
-Inicio: Resumen
-Mapa: Vendedores -> Datos rapidos
-Vendedor: Datos basicos -> Estado
+## Flujo v0.1
 
-# Flujo v0.1
+Flujo de pasos:
 
-Inicio -> El supervisor necesita revisar el estado de un vendedor en especifico, revisa el resumen del dia, le da click a mapa
-mapa -> El supervisor visualiza todos los vendedores activos sobre un mapa en tiempo real, desea revisar el estado de un vendedor en especifico, le da click al vendedor que desea ver
-vendedor -> El supervisor visualiza el estado actual del vendedor y ya puede tomar una decision
+Abrir la aplicación -> Iniciar sesión (Login) -> Visualizar el resumen del día en el Inicio -> Ir al "Listado de Vendedores" -> Seleccionar un vendedor específico de la lista -> Revisar sus datos básicos y estado actual en el "Vendedor Modal" -> Tomar acción: Enviar un recordatorio o mensaje al agente.
