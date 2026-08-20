@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ihc-backend
+    runtime: docker
+    rootDir: app/backend
+    region: ohio
+    plan: free
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://db.dcnrrdqlyabpqnwlhpor.supabase.co:5432/postgres
+      - key: DB_USER
+        value: postgres
+      - key: DB_PASSWORD
+        sync: false
+      - key: SERVER_PORT
+        value: "8000"
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRATION
+        value: "86400000"
