@@ -1,8 +1,8 @@
 package com.ihc.backend.dto;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 public class AuthRequestDTO {
     private String email;
     private String password;

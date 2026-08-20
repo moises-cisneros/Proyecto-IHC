@@ -1,10 +1,10 @@
 package com.ihc.backend.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
 
-@Data
-@AllArgsConstructor
+@Getter
+@Builder
 public class AuthResponseDTO {
     private String token;
     private String rol;
