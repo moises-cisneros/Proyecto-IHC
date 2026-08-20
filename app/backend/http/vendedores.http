@@ -1,0 +1,6 @@
+@baseUrl = http://localhost:8000/api
+@token = TOKEN
+
+### Obtener lista de vendedores
+GET {{baseUrl}}/vendedores
+Authorization: Bearer {{token}}
