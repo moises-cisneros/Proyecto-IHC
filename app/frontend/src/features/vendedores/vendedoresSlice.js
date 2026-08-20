@@ -1,13 +1,14 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../../api/client";
 
-export const fetchVendedores = createAsyncThunk("vendedores/fetch", async () => {
+export const fetchVendedores = createAsyncThunk("vendedores/fetch", async (_, {rejectWithValue}) => {
     try {
         const data = await api.get("/vendedores")
         console.log("vendedores ", data)
         return data
     } catch (error) {
         console.error("error vendedores", error)
+        return rejectWithValue("Server error")
     }
 })
 

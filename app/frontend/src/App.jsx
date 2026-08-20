@@ -12,10 +12,9 @@ export default function App(){
       <Route path='/login' element={<Login />} />
 
       <Route element={<Layout />}>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/vendedores" element={<Vendedores />} />
         <Route path="/mapa" element={<Mapa />} />
-        <Route path="/mensajes" element={<Mensajes />} />
       </Route>
     </Routes>
   )

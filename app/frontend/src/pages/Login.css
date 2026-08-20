@@ -1,0 +1,85 @@
+.login-wrap {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(24, 33, 54);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.login-card > h1 {
+    font-size: 26px;
+    margin: 0;
+    color: rgb(24, 33, 54);
+}
+
+.login-sub {
+  margin: -10px 0 4px;
+  font-size: 15px;
+  color: rgb(110, 122, 148);
+}
+
+.login-campo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  border-radius: 12px;
+  background: white;
+}
+
+.login-campo > h1 {
+    font-size: 26px;
+    color: rgb(24, 33, 54);
+}
+
+.login-sub {
+  margin: -10px 0 4px;
+  font-size: 15px;
+  color: rgb(110, 122, 148);
+}
+
+.login-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: rgb(60, 75, 105);
+
+
+}
+
+.login-campo > input {
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: rgb(24, 33, 54);
+    background: rgb(248, 250, 252);
+    border: 1px solid rgb(203, 212, 227);
+}
+
+.login-error {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(220, 60, 66);
+}
+
+.login-btn {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: rgb(37, 99, 235);
+  border: none;
+}

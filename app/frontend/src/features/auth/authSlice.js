@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../../api/client";
 
-export const login = createAsyncThunk("auth/login", async(credenciales) => {
+export const login = createAsyncThunk("auth/login", async(credenciales, {rejectWithValue}) => {
     try{
         const data = await api.post("/auth/login", credenciales)
         console.log(data)
@@ -11,10 +11,11 @@ export const login = createAsyncThunk("auth/login", async(credenciales) => {
         return data
     }catch(error){
         console.error("error login ", error)
+        return rejectWithValue("Server error")
     }
 })
 
-const savedUser = JSON.parse(localStorage.getItem("usuario" || "null"))
+const savedUser = JSON.parse(localStorage.getItem("usuario") || "null")
 
 const authSlice = createSlice({
     name: 'auth',
@@ -45,7 +46,7 @@ const authSlice = createSlice({
                 state.token = action.payload.token
             })
             .addCase(login.rejected, (state, action) => {
-                state.loading = false,
+                state.loading = false
                 state.error = action.payload
             })
     }
@@ -54,7 +55,7 @@ const authSlice = createSlice({
 
 export const {logout} = authSlice.actions
 
-export const selectUsario = (state) => state.auth.user
+export const selectUser = (state) => state.auth.user
 export const selectIsLogged = (state) => Boolean(state.auth.token)
 
 export default authSlice.reducer

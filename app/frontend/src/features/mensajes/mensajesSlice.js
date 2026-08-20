@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../../api/client";
 
-export const enviarMensaje = createAsyncThunk("mensajes/enviar", async({vendedorId, contenido}) => {
+export const enviarMensaje = createAsyncThunk("mensajes/enviar", async({vendedorId, mensaje, tipo}, {rejectWithValue}) => {
     try {
-        const data = await api.post("/notificaciones", {vendedorId, contenido})
+        const data = await api.post(`/mensajes/enviar/${vendedorId}`, {mensaje, tipo})
         console.log(data)
         return data
     } catch (error) {
         console.error("error mensaje ", error)
+        return rejectWithValue("Server error")
     }
 })
 
